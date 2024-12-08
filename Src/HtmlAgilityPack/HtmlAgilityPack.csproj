@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\RE\LunaVK\App1uwp.WindowsPhone_0.0.1.32_AnyCPU\HtmlAgilityPack.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92A6030D-B717-4E02-8731-C036695DCE3F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>HtmlAgilityPack</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.7.1.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>HtmlAgilityPack</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Diagnostics.Debug" />
+    <Reference Include="System.IO" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Primitives" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Extensions" />
+    <Reference Include="System.Runtime.InteropServices" />
+    <Reference Include="System.Text.Encoding" />
+    <Reference Include="System.Text.RegularExpressions" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Xml.ReaderWriter" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="System\InvalidProgramException.cs" />
+    <Compile Include="Crc32.cs" />
+    <Compile Include="EncodingFoundException.cs" />
+    <Compile Include="HtmlAttribute.cs" />
+    <Compile Include="AttributeValueQuote.cs" />
+    <Compile Include="HtmlAttributeCollection.cs" />
+    <Compile Include="HtmlCommentNode.cs" />
+    <Compile Include="HtmlDocument.cs" />
+    <Compile Include="HtmlElementFlag.cs" />
+    <Compile Include="HtmlEntity.cs" />
+    <Compile Include="HtmlNameTable.cs" />
+    <Compile Include="HtmlNode.cs" />
+    <Compile Include="HtmlNodeCollection.cs" />
+    <Compile Include="HtmlNodeType.cs" />
+    <Compile Include="HtmlParseError.cs" />
+    <Compile Include="HtmlParseErrorCode.cs" />
+    <Compile Include="HtmlTextNode.cs" />
+    <Compile Include="HtmlWebException.cs" />
+    <Compile Include="HtmlWeb.cs" />
+    <Compile Include="InvalidProgramException.cs" />
+    <Compile Include="NameValuePair.cs" />
+    <Compile Include="NameValuePairList.cs" />
+    <Compile Include="Trace.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

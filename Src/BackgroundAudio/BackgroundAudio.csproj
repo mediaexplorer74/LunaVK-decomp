@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\RE\LunaVK\App1uwp.WindowsPhone_0.0.1.32_AnyCPU\BackgroundAudio.winmd-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24EF93DC-36B8-4F2E-9F4E-898381AF3D7B}</ProjectGuid>
+    <OutputType>WinMD</OutputType>
+    <AssemblyName>BackgroundAudio</AssemblyName>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>BackgroundAudio</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime" />
+    <Reference Include="System.Runtime.WindowsRuntime" />
+    <Reference Include="System.Runtime.WindowsRuntime.UI.Xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AudioHeader.cs" />
+    <Compile Include="BackgroundAudioTask.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

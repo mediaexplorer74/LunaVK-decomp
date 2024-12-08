@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\RE\LunaVK\App1uwp.WindowsPhone_0.0.1.32_AnyCPU\XamlAnimatedGif.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A584C6BF-8C67-4FD4-9789-D8EE9063271D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>XamlAnimatedGif</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>XamlAnimatedGif</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Diagnostics.Debug" />
+    <Reference Include="System.IO" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Extensions" />
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime" />
+    <Reference Include="System.Runtime.WindowsRuntime" />
+    <Reference Include="System.Runtime.WindowsRuntime.UI.Xaml" />
+    <Reference Include="System.Text.Encoding" />
+    <Reference Include="System.Threading" />
+    <Reference Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimationBehavior.cs" />
+    <Compile Include="AnimationErrorEventArgs.cs" />
+    <Compile Include="AnimationErrorKind.cs" />
+    <Compile Include="Animator.cs" />
+    <Compile Include="Int32Rect.cs" />
+    <Compile Include="BrushAnimator.cs" />
+    <Compile Include="DownloadProgressEventArgs.cs" />
+    <Compile Include="ImageAnimator.cs" />
+    <Compile Include="TimingManager.cs" />
+    <Compile Include="UriLoader.cs" />
+    <Compile Include="Decoding\GifBlock.cs" />
+    <Compile Include="Decoding\GifExtension.cs" />
+    <Compile Include="Decoding\GifApplicationExtension.cs" />
+    <Compile Include="Decoding\GifBlockKind.cs" />
+    <Compile Include="Decoding\GifColor.cs" />
+    <Compile Include="Decoding\GifCommentExtension.cs" />
+    <Compile Include="Decoding\GifDataStream.cs" />
+    <Compile Include="Decoding\GifDecoderException.cs" />
+    <Compile Include="Decoding\GifFrame.cs" />
+    <Compile Include="Decoding\GifFrameDisposalMethod.cs" />
+    <Compile Include="Decoding\GifGraphicControlExtension.cs" />
+    <Compile Include="Decoding\GifHeader.cs" />
+    <Compile Include="Decoding\GifHelpers.cs" />
+    <Compile Include="Decoding\GifImageData.cs" />
+    <Compile Include="Decoding\IGifRect.cs" />
+    <Compile Include="Decoding\GifImageDescriptor.cs" />
+    <Compile Include="Decoding\GifLogicalScreenDescriptor.cs" />
+    <Compile Include="Decoding\GifPlainTextExtension.cs" />
+    <Compile Include="Decoding\GifTrailer.cs" />
+    <Compile Include="Decoding\InvalidBlockSizeException.cs" />
+    <Compile Include="Decoding\InvalidSignatureException.cs" />
+    <Compile Include="Decoding\UnknownBlockTypeException.cs" />
+    <Compile Include="Decoding\UnknownExtensionTypeException.cs" />
+    <Compile Include="Decoding\UnsupportedGifVersionException.cs" />
+    <Compile Include="Decompression\BitReader.cs" />
+    <Compile Include="Decompression\LzwDecompressStream.cs" />
+    <Compile Include="Extensions\BitArrayExtensions.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="Extensions\StreamExtensions.cs" />
+    <Compile Include="Extensions\WritableBitmapExtensions.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

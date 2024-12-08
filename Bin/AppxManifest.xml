@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Package IgnorableNamespaces="build" xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:build="http://schemas.microsoft.com/developer/appx/2012/build">
+  
+  <Identity Name="132728F202473.LunaVK" Publisher="CN=1BA38505-6371-40A7-93F7-979CEDF22649" Version="0.0.1.32" ProcessorArchitecture="neutral"/>
+  <mp:PhoneIdentity PhoneProductId="0057320f-d315-4837-9767-636ec4594699" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <Properties>
+    <DisplayName>LunaVK</DisplayName>
+    <PublisherDisplayName>Максим Гутиков</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.1</OSMinVersion>
+    <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="RU-RU"/>
+    <Resource m3:Scale="240"/>
+    
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="App1uwp.WindowsPhone.exe" EntryPoint="App1uwp.WindowsPhone.App">
+      <m3:VisualElements DisplayName="LunaVK" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="App1uwp.WindowsPhone" ForegroundText="light" BackgroundColor="transparent" ToastCapable="true">
+        <m3:LockScreen Notification="badge" BadgeLogo="Assets\BadgeLogo.png"/>
+        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"/>
+      </m3:VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundAudio.BackgroundAudioTask">
+          <BackgroundTasks>
+            <Task Type="audio"/>
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClientServer"/>
+    <Capability Name="removableStorage"/>
+    <m3:Capability Name="contacts"/>
+    <Capability Name="picturesLibrary"/>
+    <Capability Name="musicLibrary"/>
+    <Capability Name="videosLibrary"/>
+    <DeviceCapability Name="microphone"/>
+    <DeviceCapability Name="webcam"/>
+    <DeviceCapability Name="location"/>
+  </Capabilities>
+  <Extensions>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>CLRHost.dll</Path>
+        <ActivatableClass ActivatableClassId="BackgroundAudio.AudioHeader" ThreadingModel="both"/>
+        <ActivatableClass ActivatableClassId="BackgroundAudio.BackgroundAudioTask" ThreadingModel="both"/>
+        <ActivatableClass ActivatableClassId="Luna.Network.JsonWebRequest" ThreadingModel="both"/>
+      </InProcessServer>
+    </Extension>
+  </Extensions>
+  <build:Metadata>
+    <build:Item Name="SharedGUID" Value="0f1489a8-d253-4ead-8a83-7af42db50554"/>
+    <build:Item Name="CodeSharingProject" Value="248F659F-DAC5-46E8-AC09-60EC9FC95053"/>
+    <build:Item Name="TargetFrameworkMoniker" Value="WindowsPhoneApp,Version=v8.1"/>
+    <build:Item Name="VisualStudio" Version="12.0"/>
+    <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Professional 2013"/>
+    <build:Item Name="OperatingSystem" Version="10.0.16299.15 (WinBuild.160101.0800)"/>
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="12.0.40629.0"/>
+    <build:Item Name="ProjectGUID" Value="{E7832912-E4B2-454D-A79B-62BA6E88D9BD}"/>
+    <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="12.0.30501.0"/>
+    <build:Item Name="MakePri.exe" Version="6.3.9600.17336 (winblue.150226-1500)"/>
+  </build:Metadata>
+</Package>
