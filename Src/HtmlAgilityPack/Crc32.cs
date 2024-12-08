@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+﻿
 // Type: HtmlAgilityPack.Crc32
 // Assembly: HtmlAgilityPack, Version=1.7.1.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a
 // MVID: B5498F67-4C4E-4FFB-BDE4-EB084EEE38F2
@@ -9,7 +9,6 @@ using System;
 #nullable disable
 namespace HtmlAgilityPack
 {
-  [Obsolete("This type should not be used; it is intended for internal use in HTML Agility Pack.")]
   [CLSCompliant(false)]
   public class Crc32
   {

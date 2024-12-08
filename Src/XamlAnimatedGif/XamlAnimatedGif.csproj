@@ -157,6 +157,8 @@
     <Compile Include="Extensions\CollectionExtensions.cs" />
     <Compile Include="Extensions\StreamExtensions.cs" />
     <Compile Include="Extensions\WritableBitmapExtensions.cs" />
+    <Compile Include="SInterlacedRows.cs" />
+    <Compile Include="SIRow.cs" />
     <Compile Include="ImageAnimator.cs" />
     <Compile Include="Int32Rect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

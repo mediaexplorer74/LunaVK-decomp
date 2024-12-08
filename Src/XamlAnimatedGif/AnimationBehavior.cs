@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+﻿
 // Type: XamlAnimatedGif.AnimationBehavior
 // Assembly: XamlAnimatedGif, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: 02CD40CB-7FCE-4EFE-9D7D-B0095CDCA3E7
@@ -162,13 +162,13 @@ namespace XamlAnimatedGif
             else if (sourceUri != (Uri) null)
             {
               BitmapImage bitmapImage = new BitmapImage();
-              bitmapImage.put_UriSource(sourceUri);
-              image.put_Source((ImageSource) bitmapImage);
+              bitmapImage.UriSource = sourceUri;
+              image.Source = (ImageSource) bitmapImage;
             }
           }
           catch
           {
-            image.put_Source((ImageSource) null);
+            image.Source = (ImageSource) null;
           }
           return false;
         }
@@ -176,51 +176,78 @@ namespace XamlAnimatedGif
       return true;
     }
 
+    //TODO via ChatGPT
     private static void InitAnimation(Image image)
     {
-      if (AnimationBehavior.IsLoaded((FrameworkElement) image))
-      {
-        WindowsRuntimeMarshal.AddEventHandler<RoutedEventHandler>(new Func<RoutedEventHandler, EventRegistrationToken>(((FrameworkElement) image).add_Unloaded), new Action<EventRegistrationToken>(((FrameworkElement) image).remove_Unloaded), new RoutedEventHandler(AnimationBehavior.Image_Unloaded));
-        int seqNum = AnimationBehavior.GetSeqNum((DependencyObject) image) + 1;
-        AnimationBehavior.SetSeqNum((DependencyObject) image, seqNum);
-        image.put_Source((ImageSource) null);
-        AnimationBehavior.ClearAnimatorCore(image);
-        try
+        if (AnimationBehavior.IsLoaded((FrameworkElement)image))
         {
-          Stream sourceStream = AnimationBehavior.GetSourceStream((DependencyObject) image);
-          if (sourceStream != null)
-          {
-            AnimationBehavior.InitAnimationAsync(image, sourceStream.AsBuffered(), AnimationBehavior.GetRepeatBehavior((DependencyObject) image), seqNum);
-          }
-          else
-          {
-            Uri absoluteUri = AnimationBehavior.GetAbsoluteUri(image);
-            if (!(absoluteUri != (Uri) null))
-              return;
-            AnimationBehavior.InitAnimationAsync(image, absoluteUri, AnimationBehavior.GetRepeatBehavior((DependencyObject) image), seqNum);
-          }
+            //WindowsRuntimeMarshal.AddEventHandler<RoutedEventHandler>
+            //    (new Func<RoutedEventHandler, EventRegistrationToken>(((FrameworkElement)image).add_Unloaded),
+            //    new Action<EventRegistrationToken>(((FrameworkElement)image).remove_Unloaded),
+            //    new RoutedEventHandler(AnimationBehavior.Image_Unloaded));
+
+            int seqNum = AnimationBehavior.GetSeqNum((DependencyObject)image) + 1;
+            AnimationBehavior.SetSeqNum((DependencyObject)image, seqNum);
+            image.Source = (ImageSource)null;
+            AnimationBehavior.ClearAnimatorCore(image);
+            try
+            {
+                Stream sourceStream = AnimationBehavior.GetSourceStream((DependencyObject)image);
+                if (sourceStream != null)
+                {
+                    AnimationBehavior.InitAnimationAsync(image, sourceStream.AsBuffered(),
+                        AnimationBehavior.GetRepeatBehavior((DependencyObject)image), seqNum);
+                }
+                else
+                {
+                    Uri absoluteUri = AnimationBehavior.GetAbsoluteUri(image);
+                    if (!(absoluteUri != (Uri)null))
+                        return;
+                    AnimationBehavior.InitAnimationAsync(image, absoluteUri,
+                        AnimationBehavior.GetRepeatBehavior((DependencyObject)image), seqNum);
+                }
+            }
+            catch (Exception ex)
+            {
+                AnimationBehavior.OnError(image, ex, AnimationErrorKind.Loading);
+            }
         }
-        catch (Exception ex)
-        {
-          AnimationBehavior.OnError(image, ex, AnimationErrorKind.Loading);
+        else
+        { 
+            //WindowsRuntimeMarshal.AddEventHandler<RoutedEventHandler>
+            //        (new Func<RoutedEventHandler, EventRegistrationToken>(((FrameworkElement)image).add_Loaded),
+            //        new Action<EventRegistrationToken>(((FrameworkElement)image).remove_Loaded),
+            //        new RoutedEventHandler(AnimationBehavior.Image_Loaded));
         }
-      }
-      else
-        WindowsRuntimeMarshal.AddEventHandler<RoutedEventHandler>(new Func<RoutedEventHandler, EventRegistrationToken>(((FrameworkElement) image).add_Loaded), new Action<EventRegistrationToken>(((FrameworkElement) image).remove_Loaded), new RoutedEventHandler(AnimationBehavior.Image_Loaded));
     }
 
     private static void Image_Loaded(object sender, RoutedEventArgs e)
     {
       Image image = (Image) sender;
-      WindowsRuntimeMarshal.RemoveEventHandler<RoutedEventHandler>(new Action<EventRegistrationToken>(((FrameworkElement) image).remove_Loaded), new RoutedEventHandler(AnimationBehavior.Image_Loaded));
+      
+       //TODO
+       //WindowsRuntimeMarshal.RemoveEventHandler<RoutedEventHandler>(
+       //   new Action<EventRegistrationToken>(((FrameworkElement) image).remove_Loaded),
+       //   new RoutedEventHandler(AnimationBehavior.Image_Loaded));
+
       AnimationBehavior.InitAnimation(image);
     }
 
     private static void Image_Unloaded(object sender, RoutedEventArgs e)
     {
       Image image = (Image) sender;
-      WindowsRuntimeMarshal.RemoveEventHandler<RoutedEventHandler>(new Action<EventRegistrationToken>(((FrameworkElement) image).remove_Unloaded), new RoutedEventHandler(AnimationBehavior.Image_Unloaded));
-      WindowsRuntimeMarshal.AddEventHandler<RoutedEventHandler>(new Func<RoutedEventHandler, EventRegistrationToken>(((FrameworkElement) image).add_Loaded), new Action<EventRegistrationToken>(((FrameworkElement) image).remove_Loaded), new RoutedEventHandler(AnimationBehavior.Image_Loaded));
+
+          //TODO via ChatGPT
+          //WindowsRuntimeMarshal.RemoveEventHandler<RoutedEventHandler>(
+          //new Action<EventRegistrationToken>(((FrameworkElement) image).remove_Unloaded), 
+          //new RoutedEventHandler(AnimationBehavior.Image_Unloaded));
+
+          //TODO via ChatGPT
+          //WindowsRuntimeMarshal.AddEventHandler<RoutedEventHandler>(
+          //new Func<RoutedEventHandler, EventRegistrationToken>(((FrameworkElement) image).add_Loaded), 
+          //new Action<EventRegistrationToken>(((FrameworkElement) image).remove_Loaded), 
+          //new RoutedEventHandler(AnimationBehavior.Image_Loaded));
+
       AnimationBehavior.ClearAnimatorCore(image);
     }
 
@@ -237,7 +264,9 @@ namespace XamlAnimatedGif
       if (!relativeUri.IsAbsoluteUri)
       {
         Uri baseUri = ((FrameworkElement) image).BaseUri;
-        relativeUri = baseUri != (Uri) null ? new Uri(baseUri, relativeUri) : throw new InvalidOperationException("Relative URI can't be resolved");
+        relativeUri = baseUri != (Uri) null 
+                    ? new Uri(baseUri, relativeUri) 
+                    : throw new InvalidOperationException("Relative URI can't be resolved");
       }
       return relativeUri;
     }
@@ -307,7 +336,7 @@ namespace XamlAnimatedGif
     {
       AnimationBehavior.SetAnimator((DependencyObject) image, animator);
       animator.Error += new EventHandler<AnimationErrorEventArgs>(AnimationBehavior.AnimatorError);
-      image.put_Source((ImageSource) animator.Bitmap);
+      image.Source = (ImageSource) animator.Bitmap;
       if (AnimationBehavior.GetAutoStart((DependencyObject) image))
         animator.Play();
       else
@@ -331,7 +360,9 @@ namespace XamlAnimatedGif
       try
       {
         UriLoader loader = new UriLoader();
-        Progress<int> progress = new Progress<int>((Action<int>) (percentage => AnimationBehavior.OnDownloadProgress(image, percentage)));
+        Progress<int> progress = new Progress<int>((Action<int>) 
+            (percentage => AnimationBehavior.OnDownloadProgress(image, percentage)));
+
         Stream stream = await loader.GetStreamFromUriAsync(sourceUri, (IProgress<int>) progress);
         AnimationBehavior.SetStaticImageCore(image, stream);
       }
@@ -358,7 +389,7 @@ namespace XamlAnimatedGif
       stream.Seek(0L, SeekOrigin.Begin);
       BitmapImage bitmapImage = new BitmapImage();
       ((BitmapSource) bitmapImage).SetSource(stream.AsRandomAccessStream());
-      image.put_Source((ImageSource) bitmapImage);
+      image.Source = (ImageSource) bitmapImage;
     }
   }
 }

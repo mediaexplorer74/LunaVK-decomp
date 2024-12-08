@@ -1,0 +1,161 @@
+﻿<!--Page
+    x:Class="App1uwp.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1uwp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+    </Grid>
+</Page-->
+<local:PageBase xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                xmlns:local="using:App1uwp"
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                xmlns:uc="using:App1uwp.UC"
+                x:Class="App1uwp.AboutPage"
+                Foreground="White">
+    <!--FontSize>
+        <StaticResource ResourceKey="FontSizeContent" />
+    </FontSize-->
+    <local:PageBase.Resources>
+        <ResourceDictionary>
+            <Style TargetType="TextBlock">
+                <Setters>
+                    <SetterBaseCollection>
+                        <Setter Property="Margin" Value="0 10" />
+                        <Setter Property="TextWrapping" Value="Wrap" />
+                    </SetterBaseCollection>
+                </Setters>
+            </Style>
+        </ResourceDictionary>
+    </local:PageBase.Resources>
+    <Content>
+        <Grid>
+            <Background>
+                <StaticResource ResourceKey="AccentBrushHigh" />
+            </Background>
+            <Children>
+                <UIElementCollection>
+                    <ScrollViewer>
+                        <Content>
+                            <StackPanel Margin="20,0,20,0">
+                                <Style>
+                                    <StaticResource ResourceKey="TransitionStackPanelStyle" />
+                                </Style>
+                                <Children>
+                                    <UIElementCollection>
+                                        <Rectangle Name="Offset" />
+                                        <uc:IconUC Glyph="" FontSize="150" Margin="0,20,0,20" />
+                                        <TextBlock Text="LunaVK - альтернативный клиент ВКонтакте для устройств семейства Windows" TextWrapping="Wrap" />
+                                        <TextBlock Text="Version" Name="ver" Opacity="0,6" />
+                                        <TextBlock Text="Api" Name="api" />
+                                        <Rectangle Height="1" Fill="White" Margin="0,10,0,10" Opacity="0,2" />
+                                        <Border x:ConnectionId="1" Background="Transparent">
+                                            <Child>
+                                                <TextBlock Text="Обратная связь" />
+                                            </Child>
+                                        </Border>
+                                        <TextBlock Text="Оценить приложение" />
+                                        <Border x:ConnectionId="2" Background="Transparent">
+                                            <Child>
+                                                <TextBlock Text="Политика конфиденциальности" />
+                                            </Child>
+                                        </Border>
+                                        <Border x:ConnectionId="3" Background="Transparent">
+                                            <Child>
+                                                <TextBlock Text="Правила пользования" />
+                                            </Child>
+                                        </Border>
+                                        <Rectangle Height="1" Fill="White" Margin="0,10,0,10" Opacity="0,2" />
+                                        <TextBlock Text="Активные участники проекта" FontWeight="Medium" />
+                                        <Grid>
+                                            <ColumnDefinitions>
+                                                <ColumnDefinitionCollection>
+                                                    <ColumnDefinition Width="60px" />
+                                                    <ColumnDefinition />
+                                                </ColumnDefinitionCollection>
+                                            </ColumnDefinitions>
+                                            <Children>
+                                                <UIElementCollection>
+                                                    <Ellipse Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                                        <Fill>
+                                                            <ImageBrush Stretch="Fill" ImageSource="https://pp.userapi.com/c824503/v824503139/f8c9a/BUnLgb3CBTk.jpg" />
+                                                        </Fill>
+                                                    </Ellipse>
+                                                    <StackPanel Column="1">
+                                                        <Children>
+                                                            <UIElementCollection>
+                                                                <TextBlock Text="Максим Гутиков" FontWeight="Medium" Margin="0,0,0,0" />
+                                                                <TextBlock Text="программирование, дизайн, анимация, адаптирование" Opacity="0,5" Margin="0,0,0,0" />
+                                                            </UIElementCollection>
+                                                        </Children>
+                                                    </StackPanel>
+                                                </UIElementCollection>
+                                            </Children>
+                                        </Grid>
+                                        <Grid Margin="0,20,0,0">
+                                            <ColumnDefinitions>
+                                                <ColumnDefinitionCollection>
+                                                    <ColumnDefinition Width="60px" />
+                                                    <ColumnDefinition />
+                                                </ColumnDefinitionCollection>
+                                            </ColumnDefinitions>
+                                            <Children>
+                                                <UIElementCollection>
+                                                    <Ellipse Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                                        <Fill>
+                                                            <ImageBrush Stretch="Fill" ImageSource="https://pp.userapi.com/c845420/v845420952/1fb2e/6tdFziYXdEs.jpg" />
+                                                        </Fill>
+                                                    </Ellipse>
+                                                    <StackPanel Column="1">
+                                                        <Children>
+                                                            <UIElementCollection>
+                                                                <TextBlock Text="Арслан Зарипов" FontWeight="Medium" Margin="0,0,0,0" />
+                                                                <TextBlock Text="тестирование, связь с общественностью, идеи" Opacity="0,5" Margin="0,0,0,0" />
+                                                            </UIElementCollection>
+                                                        </Children>
+                                                    </StackPanel>
+                                                </UIElementCollection>
+                                            </Children>
+                                        </Grid>
+                                        <Grid Margin="0,20,0,0">
+                                            <ColumnDefinitions>
+                                                <ColumnDefinitionCollection>
+                                                    <ColumnDefinition Width="60px" />
+                                                    <ColumnDefinition />
+                                                </ColumnDefinitionCollection>
+                                            </ColumnDefinitions>
+                                            <Children>
+                                                <UIElementCollection>
+                                                    <Ellipse Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                                        <Fill>
+                                                            <ImageBrush Stretch="Fill" ImageSource="https://pp.userapi.com/c834201/v834201335/f9528/Bbxqby0w5_s.jpg" />
+                                                        </Fill>
+                                                    </Ellipse>
+                                                    <StackPanel Column="1">
+                                                        <Children>
+                                                            <UIElementCollection>
+                                                                <TextBlock Text="Даниил Краев" FontWeight="Medium" Margin="0,0,0,0" />
+                                                                <TextBlock Text="дизайн" Opacity="0,5" Margin="0,0,0,0" />
+                                                            </UIElementCollection>
+                                                        </Children>
+                                                    </StackPanel>
+                                                </UIElementCollection>
+                                            </Children>
+                                        </Grid>
+                                    </UIElementCollection>
+                                </Children>
+                            </StackPanel>
+                        </Content>
+                    </ScrollViewer>
+                </UIElementCollection>
+            </Children>
+        </Grid>
+    </Content>
+</local:PageBase>

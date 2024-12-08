@@ -1,0 +1,36 @@
+﻿<local:PageBase xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="using:App1uwp" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:UC="using:App1uwp.UC" x:Class="App1uwp.TestNotificationsPanel">
+    <Content>
+        <Grid Margin="0,100,0,0">
+            <Children>
+                <UIElementCollection>
+                    <Grid Height="246" Width="490" Name="BackGrid" VerticalAlignment="Top" Background="Red">
+                        <Children>
+                            <UIElementCollection>
+                                <Image x:Name="image" HorizontalAlignment="Left" Source="https://pp.userapi.com/c824503/v824503139/f8c8f/FpaFKcBBJy0.jpg" VerticalAlignment="Top" Stretch="UniformToFill" Margin="0,-283,0,0">
+                                    <Clip>
+                                        <RectangleGeometry x:Name="ProfileImageClipRect" Rect="0 283 490 246" />
+                                    </Clip>
+                                </Image>
+                            </UIElementCollection>
+                        </Children>
+                    </Grid>
+                    <Button x:ConnectionId="1" Content="Cl" />
+                    <TextBlock Foreground="Blue" FontSize="20" Name="Temp" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                    <TextBlock Foreground="Green" FontSize="20" Name="Temp2" Margin="0,-40,0,50" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                    <StackPanel Background="BlueViolet" VerticalAlignment="Bottom" Visibility="Collapsed">
+                        <Children>
+                            <UIElementCollection>
+                                <TextBlock Text="Количество собседников" />
+                                <Slider x:ConnectionId="2" Name="slUsers" Minimum="0" Maximum="10" />
+                                <TextBlock Text="Итервал между сообщениями" />
+                                <Slider x:ConnectionId="3" Name="slInterv" Minimum="1" Value="3" Maximum="8" />
+                                <TextBlock Text="Длина сообщения" />
+                                <Slider x:ConnectionId="4" Name="slLen" Minimum="5" Value="10" Maximum="30" />
+                            </UIElementCollection>
+                        </Children>
+                    </StackPanel>
+                </UIElementCollection>
+            </Children>
+        </Grid>
+    </Content>
+</local:PageBase>

@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+﻿
 // Type: XamlAnimatedGif.Animator
 // Assembly: XamlAnimatedGif, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: 02CD40CB-7FCE-4EFE-9D7D-B0095CDCA3E7
@@ -288,12 +288,12 @@ namespace XamlAnimatedGif
 
     private static IEnumerable<int> InterlacedRows(int height)
     {
-      \u003C\u003Ef__AnonymousType0<int, int>[] passes = new \u003C\u003Ef__AnonymousType0<int, int>[4]
+      SInterlacedRows<int, int>[] passes = new SInterlacedRows<int, int>[4]
       {
-        new{ Start = 0, Step = 8 },
-        new{ Start = 4, Step = 8 },
-        new{ Start = 2, Step = 4 },
-        new{ Start = 1, Step = 2 }
+          new SIRow{Start = 0, Step = 8},
+          new SIRow{Start = 4, Step = 8},
+          new SIRow{Start = 2, Step = 4},
+          new SIRow{Start = 1, Step = 2}        
       };
       foreach (var data in passes)
       {
@@ -408,7 +408,7 @@ namespace XamlAnimatedGif
       {
         // ISSUE: explicit finalizer call
         // ISSUE: explicit non-virtual call
-        __nonvirtual (((object) this).Finalize());
+        //this.Finalize());
       }
     }
 

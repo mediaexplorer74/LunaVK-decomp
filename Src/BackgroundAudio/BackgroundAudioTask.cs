@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+﻿
 // Type: BackgroundAudio.BackgroundAudioTask
 // Assembly: BackgroundAudio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime
 // MVID: BDE4D73A-D23E-4D0C-B342-DEA789080D59
@@ -13,20 +13,19 @@ using Windows.Foundation.Metadata;
 #nullable disable
 namespace BackgroundAudio
 {
-  [MarshalingBehavior]
-  [Threading]
+
   [Version(16777216)]
   [CompilerGenerated]
   [Activatable(16777216)]
   public sealed class BackgroundAudioTask : IBackgroundTask, IStringable
   {
-    [MethodImpl]
+    [MethodImpl(default)]
     public extern BackgroundAudioTask();
 
-    [MethodImpl]
+    [MethodImpl(default)]
     public extern void Run([In] IBackgroundTaskInstance taskInstance);
 
-    [MethodImpl]
+    [MethodImpl(default)]
     extern string IStringable.ToString();
   }
 }

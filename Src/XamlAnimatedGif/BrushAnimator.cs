@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+﻿
 // Type: XamlAnimatedGif.BrushAnimator
 // Assembly: XamlAnimatedGif, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: 02CD40CB-7FCE-4EFE-9D7D-B0095CDCA3E7
@@ -26,7 +26,7 @@ namespace XamlAnimatedGif
       : base(sourceStream, sourceUri, metadata, repeatBehavior)
     {
       ImageBrush imageBrush = new ImageBrush();
-      imageBrush.put_ImageSource((ImageSource) this.Bitmap);
+      imageBrush.ImageSource = (ImageSource) this.Bitmap;
       this.Brush = imageBrush;
       this.RepeatBehavior = this._repeatBehavior;
     }

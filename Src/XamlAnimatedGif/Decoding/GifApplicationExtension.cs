@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+﻿
 // Type: XamlAnimatedGif.Decoding.GifApplicationExtension
 // Assembly: XamlAnimatedGif, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 // MVID: 02CD40CB-7FCE-4EFE-9D7D-B0095CDCA3E7

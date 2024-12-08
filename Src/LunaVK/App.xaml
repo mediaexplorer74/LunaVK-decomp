@@ -1,0 +1,353 @@
+﻿<!--Application
+    x:Class="App1uwp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1uwp">
+
+</Application-->
+<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:local="using:App1uwp" 
+             xmlns:UC="using:App1uwp.UC" 
+             xmlns:controls="using:App1uwp.Utils" 
+             xmlns:framework="using:App1uwp.Framework" 
+             x:Class="App1uwp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <x:Double x:Key="FontSizeContent">18.5</x:Double>
+            <x:Double x:Key="FontSizeLarge">25</x:Double>
+            <x:Double x:Key="FontSizeSmall">15</x:Double>
+            <x:Double x:Key="FontSizeExtraLarge">30</x:Double>
+            <x:Double x:Key="Double96">96.0</x:Double>
+            <x:Double x:Key="Double72">72.0</x:Double>
+            <x:Double x:Key="Double64">64.0</x:Double>
+            <x:Double x:Key="Double55">55.0</x:Double>
+            <x:Double x:Key="Double50">50.0</x:Double>
+            <x:Double x:Key="Double40">40.0</x:Double>
+            <x:Double x:Key="Double20">20.0</x:Double>
+            <Color x:Key="PhoneAccentColor">#FF4877CB</Color>
+            <Color x:Key="PhoneTextColorContent">#FF323232</Color>
+            <Color x:Key="ShadowColor">#66000000</Color>
+            <Color x:Key="AccentColor0">#FF4877CB</Color>
+            <Color x:Key="AccentColor1">#FF5181B8</Color>
+            <Color x:Key="AccentColor2">#FF08AC0F</Color>
+            <Color x:Key="AccentColor3">#FFE28602</Color>
+            <Color x:Key="AccentColor4">#FFDE0000</Color>
+            <Color x:Key="AccentColor5">#FFCD00D6</Color>
+            <Color x:Key="AccentColor6">#FF68569a</Color>
+            <Color x:Key="AccentColor7">#FF91cdec</Color>
+            <SolidColorBrush x:Key="TextBoxFocusedBackgroundThemeBrush" Color="#FF4877CB" />
+            <Thickness x:Key="PhoneTouchTargetOverhang">0</Thickness>
+            <SolidColorBrush x:Key="ButtonPressedBackgroundThemeBrush" Color="#FF5181B8" />
+            <SolidColorBrush x:Key="ProgressBarIndeterminateForegroundThemeBrush" Color="#FFE28602" />
+            <SolidColorBrush x:Key="AccentBrushHigh" Color="#FF68569a"/>
+            <SolidColorBrush x:Key="AccentBrushMediumHigh" Color="#FF91cdec" />
+            <SolidColorBrush x:Key="AccentBrushMedium" Color="#FF91cdec" />
+            <SolidColorBrush x:Key="AccentBrushMediumLow" Color="#FF91cdec" />
+            <SolidColorBrush x:Key="AccentBrushLow" Color="#FF91cdec" />
+            <SolidColorBrush x:Key="BaseBackgroundBrush" Color="#FF91cdec" />
+            <SolidColorBrush x:Key="ItemBackgroundBrush" Color="#FF91cdec" />
+            <SolidColorBrush x:Key="TextColorTitle" Color="#FF91cdec" />
+            <SolidColorBrush x:Key="TextColorContent" Color="#FF91cdec"/>
+
+
+            <SolidColorBrush x:Key="TextColorSubContent" Color="#FF91cdec" />
+            <SolidColorBrush x:Key="PhoneDialogGiftMessageBackgroundBrush" Color="#FF91cdec" />
+            
+            <!--Style TargetType="framework:CustomFrame">
+                <Setters>
+                    <SetterBaseCollection>
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+                        <Setter Property="Template">
+                            <Value>
+                                <ControlTemplate TargetType="framework:CustomFrame">
+                                    <Template>
+                                        <Grid>
+                                            <Children>
+                                                <UIElementCollection>
+                                                    <ContentPresenter>
+                                                        <HorizontalAlignment>
+                                                            <TemplateBinding Property="HorizontalContentAlignment" />
+                                                        </HorizontalAlignment>
+                                                        <VerticalAlignment>
+                                                            <TemplateBinding Property="VerticalContentAlignment" />
+                                                        </VerticalAlignment>
+                                                    </ContentPresenter>
+                                                    <framework:CommandBar x:Name="CommandBarPanel" VerticalAlignment="Bottom" Opacity="0,9">
+                                                        <Background>
+                                                            <StaticResource ResourceKey="BaseBackgroundBrush" />
+                                                        </Background>
+                                                        <Foreground>
+                                                            <StaticResource ResourceKey="TextColorContent" />
+                                                        </Foreground>
+                                                    </framework:CommandBar>
+                                                    <UC:HeaderWithMenuUC x:Name="HeaderWithMenu" />
+                                                    <UC:NotificationsPanel x:Name="NotificationsPanel" VerticalAlignment="Top" />
+                                                    <Grid x:Name="Overlay" />
+                                                </UIElementCollection>
+                                            </Children>
+                                        </Grid>
+                                    </Template>
+                                </ControlTemplate>
+                            </Value>
+                        </Setter>
+                    </SetterBaseCollection>
+                </Setters>
+            </Style-->
+            
+            
+            <Style TargetType="Button">
+                <Style.Setters>
+                    <!--SetterBaseCollection>
+                        <Setter Property="BorderThickness" Value="0" />
+                        <Setter Property="Background">
+                            <Value>
+                                <StaticResource ResourceKey="PhoneAccentColor" />
+                            </Value>
+                        </Setter>
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="FontWeight" Value="Normal" />
+                        <Setter Property="MinHeight" Value="0" />
+                        <Setter Property="MinWidth" Value="0" />
+                        <Setter Property="Padding" Value="15 5" />
+                    </SetterBaseCollection-->
+                </Style.Setters>
+            </Style>
+            
+            <Style x:Key="VKButtonSecondaryStyle" TargetType="Button">
+                <Style.Setters>
+                    <!--Style.Setters.SetterBaseCollection>
+                        <Setter Property="BorderThickness" Value="1" />
+                        <Setter Property="BorderBrush">
+                            <Value>
+                                <StaticResource ResourceKey="PhoneAccentColor" />
+                            </Value>
+                        </Setter>
+                        <Setter Property="Background">
+                            <Value>
+                                <StaticResource ResourceKey="AccentBrushMediumLow" />
+                            </Value>
+                        </Setter>
+                        <Setter Property="Foreground">
+                            <Value>
+                                <StaticResource ResourceKey="PhoneAccentColor" />
+                            </Value>
+                        </Setter>
+                        <Setter Property="FontWeight" Value="Normal" />
+                        <Setter Property="MinHeight" Value="0" />
+                        <Setter Property="MinWidth" Value="0" />
+                        <Setter Property="Padding" Value="15 5" />
+                    </Style.Setters.SetterBaseCollection-->
+                </Style.Setters>
+            </Style>
+            <Style TargetType="Slider">
+                <Style.Setters>
+                    <!--SetterBaseCollection>
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="BorderBrush">
+                            <Value>
+                                <StaticResource ResourceKey="BaseBackgroundBrush" />
+                            </Value>
+                        </Setter>
+                        <Setter Property="BorderThickness" Value="0" />
+                        <Setter Property="Foreground">
+                            <Value>
+                                <StaticResource ResourceKey="PhoneAccentColor" />
+                            </Value>
+                        </Setter>
+                    </SetterBaseCollection-->
+                </Style.Setters>
+            </Style>
+            
+            <!--Style TargetType="framework:ExtendedListView2">
+                <Style.Setters>
+                    <SetterBaseCollection>
+                        <Setter Property="Template">
+                            <Value>
+                                <ControlTemplate TargetType="framework:ExtendedListView2">
+                                    <Template>
+                                        <ListView x:Name="listView" SelectionMode="None" IsSwipeEnabled="True" IsZoomedInView="True" VerticalScrollBarVisibility="Hidden" VirtualizationMode="Recycling" HorizontalScrollBarVisibility="Disabled" HorizontalScrollMode="Disabled">
+                                            <ItemsSource>
+                                                <TemplateBinding Property="ItemsSource" />
+                                            </ItemsSource>
+                                            <ItemTemplate>
+                                                <TemplateBinding Property="ItemTemplate" />
+                                            </ItemTemplate>
+                                            <Header>
+                                                <StackPanel>
+                                                    <Children>
+                                                        <UIElementCollection>
+                                                            <Rectangle x:Name="rect" Height="1" />
+                                                            <Rectangle x:Name="offsetForHeader" Height="81" />
+                                                            <Grid x:Name="headerGrid" />
+                                                        </UIElementCollection>
+                                                    </Children>
+                                                </StackPanel>
+                                            </Header>
+                                            <Footer>
+                                                <Grid>
+                                                    <Children>
+                                                        <UIElementCollection>
+                                                            <Rectangle x:Name="offsetForFooter" Height="0" />
+                                                            <Grid x:Name="footerGrid" />
+                                                        </UIElementCollection>
+                                                    </Children>
+                                                </Grid>
+                                            </Footer>
+                                            <ItemContainerStyle>
+                                                <Style TargetType="ListViewItem">
+                                                    <Setters>
+                                                        <SetterBaseCollection>
+                                                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                                        </SetterBaseCollection>
+                                                    </Setters>
+                                                </Style>
+                                            </ItemContainerStyle>
+                                            <ItemContainerTransitions>
+                                                <TransitionCollection>
+                                                    <EntranceThemeTransition FromHorizontalOffset="0" FromVerticalOffset="50" IsStaggeringEnabled="False" />
+                                                    <AddDeleteThemeTransition />
+                                                    <RepositionThemeTransition />
+                                                </TransitionCollection>
+                                            </ItemContainerTransitions>
+                                        </ListView>
+                                    </Template>
+                                </ControlTemplate>
+                            </Value>
+                        </Setter>
+                    </SetterBaseCollection>
+                </Style.Setters>
+            </Style-->
+            <Style x:Key="ListViewItemFlatStyle" TargetType="ListViewItem">
+                <Style.Setters>
+                    <!--SetterBaseCollection>
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        <Setter Property="Template">
+                            <Value>
+                                <ControlTemplate TargetType="ListViewItem">
+                                    <Template>
+                                        <ContentPresenter />
+                                    </Template>
+                                </ControlTemplate>
+                            </Value>
+                        </Setter>
+                    </SetterBaseCollection-->
+                </Style.Setters>
+            </Style>
+            <Style TargetType="FlipView">
+                <!--Style.Setters>
+                    <SetterBaseCollection>
+                        <Setter Property="Template">
+                            <Value>
+                                <ControlTemplate TargetType="FlipView">
+                                    <Template>
+                                        <Grid VisualStateGroups="">
+                                            <Children>
+                                                <UIElementCollection>
+                                                    <Border Margin="0,0,0,0" Resources="">
+                                                        <Background>
+                                                            <TemplateBinding Property="Background" />
+                                                        </Background>
+                                                        <BorderBrush>
+                                                            <TemplateBinding Property="BorderBrush" />
+                                                        </BorderBrush>
+                                                        <BorderThickness>
+                                                            <TemplateBinding Property="BorderThickness" />
+                                                        </BorderThickness>
+                                                        <Child>
+                                                            <Grid>
+                                                                <Children>
+                                                                    <UIElementCollection>
+                                                                        <ScrollViewer x:Name="ScrollingHost" VerticalSnapPointsType="MandatorySingle" HorizontalSnapPointsType="MandatorySingle" ZoomMode="Disabled" IsTabStop="True" AccessibilityView="Raw">
+                                                                            <HorizontalScrollMode>
+                                                                                <TemplateBinding Property="ScrollViewer.HorizontalScrollMode" />
+                                                                            </HorizontalScrollMode>
+                                                                            <HorizontalScrollBarVisibility>
+                                                                                <TemplateBinding Property="ScrollViewer.HorizontalScrollBarVisibility" />
+                                                                            </HorizontalScrollBarVisibility>
+                                                                            <VerticalScrollMode>
+                                                                                <TemplateBinding Property="ScrollViewer.VerticalScrollMode" />
+                                                                            </VerticalScrollMode>
+                                                                            <VerticalScrollBarVisibility>
+                                                                                <TemplateBinding Property="ScrollViewer.VerticalScrollBarVisibility" />
+                                                                            </VerticalScrollBarVisibility>
+                                                                            <IsHorizontalRailEnabled>
+                                                                                <TemplateBinding Property="ScrollViewer.IsHorizontalRailEnabled" />
+                                                                            </IsHorizontalRailEnabled>
+                                                                            <IsVerticalRailEnabled>
+                                                                                <TemplateBinding Property="ScrollViewer.IsVerticalRailEnabled" />
+                                                                            </IsVerticalRailEnabled>
+                                                                            <IsHorizontalScrollChainingEnabled>
+                                                                                <TemplateBinding Property="ScrollViewer.IsHorizontalScrollChainingEnabled" />
+                                                                            </IsHorizontalScrollChainingEnabled>
+                                                                            <IsVerticalScrollChainingEnabled>
+                                                                                <TemplateBinding Property="ScrollViewer.IsVerticalScrollChainingEnabled" />
+                                                                            </IsVerticalScrollChainingEnabled>
+                                                                            <IsDeferredScrollingEnabled>
+                                                                                <TemplateBinding Property="ScrollViewer.IsDeferredScrollingEnabled" />
+                                                                            </IsDeferredScrollingEnabled>
+                                                                            <BringIntoViewOnFocusChange>
+                                                                                <TemplateBinding Property="ScrollViewer.BringIntoViewOnFocusChange" />
+                                                                            </BringIntoViewOnFocusChange>
+                                                                            <Padding>
+                                                                                <TemplateBinding Property="Padding" />
+                                                                            </Padding>
+                                                                            <TabNavigation>
+                                                                                <TemplateBinding Property="TabNavigation" />
+                                                                            </TabNavigation>
+                                                                            <Content>
+                                                                                <ItemsPresenter />
+                                                                            </Content>
+                                                                        </ScrollViewer>
+                                                                    </UIElementCollection>
+                                                                </Children>
+                                                            </Grid>
+                                                        </Child>
+                                                    </Border>
+                                                </UIElementCollection>
+                                            </Children>
+                                        </Grid>
+                                    </Template>
+                                </ControlTemplate>
+                            </Value>
+                        </Setter>
+                    </SetterBaseCollection>
+                </Style.Setters-->
+            </Style>
+            <Style TargetType="ComboBox">
+                <Style.Setters>
+                    <!--SetterBaseCollection>
+                        <Setter Property="BorderThickness" Value="2" />
+                    </SetterBaseCollection-->
+                </Style.Setters>
+            </Style>
+            <Style x:Key="TransitionStackPanelStyle" TargetType="StackPanel">
+                <Style.Setters>
+                    <!--SetterBaseCollection>
+                        <Setter Property="ChildrenTransitions">
+                            <Value>
+                                <TransitionCollection>
+                                    <EntranceThemeTransition FromHorizontalOffset="0" FromVerticalOffset="50" />
+                                </TransitionCollection>
+                            </Value>
+                        </Setter>
+                    </SetterBaseCollection-->
+                </Style.Setters>
+            </Style>
+            <Style x:Key="TransitionItemsControlStyle" TargetType="ItemsControl">
+                <Style.Setters>
+                    <!--SetterBaseCollection>
+                        <Setter Property="ItemContainerTransitions">
+                            <Value>
+                                <TransitionCollection>
+                                    <EntranceThemeTransition FromHorizontalOffset="0" FromVerticalOffset="50" />
+                                </TransitionCollection>
+                            </Value>
+                        </Setter>
+                    </SetterBaseCollection-->
+                </Style.Setters>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

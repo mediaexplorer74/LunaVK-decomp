@@ -123,7 +123,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="LunaVKProto\AboutPage.cs" />
-    <Compile Include="LunaVKProto\App.cs" />
     <Compile Include="LunaVKProto\AppInfo.cs" />
     <Compile Include="LunaVKProto\Audio\ForegroundPlaylistManager.cs" />
     <Compile Include="LunaVKProto\Constants.cs" />
@@ -499,12 +498,29 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.14</Version>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\segmdl2.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App1uwp_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackgroundAudio\BackgroundAudio.csproj">
+      <Project>{2e8cc005-55d6-4d4e-82e2-412de44b9df9}</Project>
+      <Name>BackgroundAudio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Luna.Network\Luna.Network.csproj">
+      <Project>{0afcfd28-fd4e-43db-a03d-9908c54e1d6a}</Project>
+      <Name>Luna.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XamlAnimatedGif\XamlAnimatedGif.csproj">
+      <Project>{13a66905-d03d-49df-8414-46801fe43008}</Project>
+      <Name>XamlAnimatedGif</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

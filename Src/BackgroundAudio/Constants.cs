@@ -1,4 +1,4 @@
-﻿// Decompiled with JetBrains decompiler
+﻿
 // Type: BackgroundAudio.Constants
 // Assembly: BackgroundAudio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime
 // MVID: BDE4D73A-D23E-4D0C-B342-DEA789080D59
