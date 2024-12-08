@@ -1,0 +1,49 @@
+﻿/*using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+[assembly: AssemblyTitle("HtmlAgilityPack")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("HtmlAgilityPack")]
+[assembly: AssemblyCopyright("Copyright ©  2024")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: ComVisible(false)]
+*/
+using System;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Security;
+
+[assembly: CLSCompliant(true)]
+[assembly: AssemblyTitle("Html Agility Pack - Release")]
+[assembly: InternalsVisibleTo("HtmlAgilityPack.Tests, PublicKey=002400000480000094000000060200000024000052534131000400000100010027dc71d8e0b968c7324238e18a4cee4a367f1bf50c9d7a52d91ed46c6a1a584b9142c1d4234c4011d25437c909924079660c434eebe6d2c46412f30520a276e7ca8d8fa7075bb8b9e1c7502ef0e50423b32d469ba750012823fde16989ab42d8428ca5fdd0b06b801788a17239b78e0f75900012a50c5038ab93abbe2ac0d6ee")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("ZZZ Projects Inc.")]
+[assembly: AssemblyProduct("Html Agility Pack")]
+[assembly: AssemblyCopyright("Copyright © ZZZ Projects Inc. 2014 - 2017")]
+[assembly: AssemblyTrademark("SQL & .NET Tools")]
+[assembly: ComVisible(true)]
+[assembly: Guid("643622ea-d2aa-4572-a2b2-6202b7fcd83f")]
+[assembly: AssemblyFileVersion("1.7.1")]
+[assembly: AssemblyInformationalVersion("1.7.1")]
+[assembly: AllowPartiallyTrustedCallers]
+[assembly: AssemblyDelaySign(false)]
+[assembly: AssemblyKeyName("")]
+[assembly: AssemblyVersion("1.7.1.0")]
