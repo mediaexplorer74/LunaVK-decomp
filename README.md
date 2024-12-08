@@ -4,6 +4,13 @@
 ## About
 LunaVK 0.0.1.32. Just decompiled via JetBrains DotPeek.
 
+## Content(s)
+ - App1uwp (partiallly reversed)
+ - BackgroundAudio (reversed)
+ - HtmlAgilityPack (reversed)
+ - Luna.Network (reversed)
+ - XamlAnimatedGif (partially reversed)
+ - LunaVK (my uncompleted uwp project)
 
 ## Licensing
 MIT License
